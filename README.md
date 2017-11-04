@@ -1,5 +1,5 @@
-#Getting started on this project
-##Installing Rails, RVM and Ruby
+# Getting started on this project
+## Installing Rails, RVM and Ruby
 [Rails Install Guide](http://installrails.com/)
 
 
