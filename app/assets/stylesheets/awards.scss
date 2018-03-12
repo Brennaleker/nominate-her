@@ -2,20 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.jumbotron {
+a {
+    transition: all .3s;
+}
+
+.hero{
     background-color: $gray-900;
+    padding: $grid-gutter-width;
     border-radius: 0;
     color: #ffffff;
     margin-bottom: 0;
-    text-align: center;
+    h1, h2 {
+        line-height: 1.1;
+        @include media-breakpoint-up(sm) {
+            font-size: 4.5rem;
+        }
+    }
+    h1 {
+        font-weight: bold;
+    }
+    h2 {
+        color: $blue-light;
+    }
+    .lead {
+        a {
+            color: $cyan;
+        }
+        a:hover, a:active, a:focus {
+            color: $blue-light;
+            text-decoration: none;
+        }
+    }
 }
 
 .card-holder-awards {
-    background: linear-gradient($blue, $cyan);
-    padding-top: $grid-gutter-width;
-    padding-bottom: $grid-gutter-width;
-    padding-left: $grid-gutter-width;
-    padding-right: $grid-gutter-width;
+    background: linear-gradient($blue-light, $cyan);
+    padding: $grid-gutter-width;
     .card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -29,15 +51,66 @@
     	letter-spacing: 0.05em;
     	text-transform: uppercase;
     }
+    .card-footer {
+        display: none;
+    }
 }
 
 
 .card-footer {
     .list-inline {
         margin-bottom: 0;
+        // display: none;
     }
 }
 
 #notice {
     display: none;
+}
+
+.header {
+    background-color: $gray-900;
+    font-weight: bold;
+    padding: 1em 0em;
+    a {
+        color: $blue-light;
+    }
+    a:hover, a:active, a:focus {
+        color: $cyan;
+        text-decoration: none;
+    }
+}
+
+.page-title {
+    padding: 1.5em 0 1.2em 0;
+    background-color: $blue;
+    color: $white;
+    margin-bottom: 1.5em;
+    @include media-breakpoint-up(sm) {
+        padding: 3.5em 0 3em 0;
+        margin-bottom: 3em;
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+
+}
+
+.link-back {
+    margin-top: 3rem;
+
+}
+
+// FORMS
+
+.form-group {
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 2rem;
+    }
+    label {
+        font-weight: bold;
+    }
+}
+.actions {
+    margin: 1rem 0 3rem 0;
 }

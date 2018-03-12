@@ -1,19 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @award.name %>
-</p>
+<div class="header">
+    <div class="container">
+        <%= link_to 'Nominate Her', awards_path %>
+    </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @award.description %>
-</p>
+<div class="page-title">
+	<div class="container">
+	    <h1><%= @award.name %></h1>
+    </div>
+</div>
 
-<p>
-  <strong>Nomination close date:</strong>
-  <%= @award.nomination_close_date %>
-</p>
 
-<%= link_to 'Edit', edit_award_path(@award) %> |
-<%= link_to 'Back', awards_path %>
+<div class="container">
+
+<div class="row mb-5">
+	<div class="col-sm-4">
+		<h2>URL</h2>
+	</div>
+	<div class="col-sm-8 pt-2">
+		<a href="<%= @award.link %>" target="_blank"> <%= @award.link %></a>
+	</div>
+</div>	
+
+<hr class="my-5">
+
+<div class="row mb-5">
+	<div class="col-sm-4">
+		<h2>Description</h2>
+	</div>
+	<div class="col-sm-8 pt-2">
+		<%= @award.description %>
+	</div>
+</div>	
+
+<hr class="my-5">
+
+<div class="row mb-5">
+	<div class="col-sm-4">
+		<h2>Nomination close date</h2>
+	</div>
+	<div class="col-sm-8 pt-2">
+		<%= @award.nomination_close_date %>
+	</div>
+</div>	
+
+<hr class="my-5">
+
+
+<%= link_to 'Edit Award Details', edit_award_path(@award), class: 'btn btn-primary btn-lg mb-5'  %>
+</div>

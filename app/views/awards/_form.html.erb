@@ -12,27 +12,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :award_name %>
+  <div class="form-group field row">
+      <%= form.label :name, class: "col-form-label col-sm-3 col-md-2" %>
+      <div class="col-sm-9 col-lg-8">
+      <%= form.text_field :name, id: :award_name, class: 'form-control ', placeholder: "Name of the award" %>
+      </div>
   </div>
 
-  <div class="field">
-    <%=  form.label :link %>
-    <%=  form.text_field :link, id: :award_link %>
+  <div class="form-group field row">
+    <%=  form.label :link, class: "col-form-label col-sm-3 col-md-2" %>
+    <div class="col-sm-9 col-lg-8">
+    <%=  form.text_field :link, id: :award_link, class: 'form-control', placeholder: "URL to find more information or apply" %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :award_description %>
+  <div class="form-group field row">
+    <%= form.label :description, class: "col-form-label col-sm-3 col-md-2" %>
+    <div class="col-sm-9 col-lg-8">
+    <%= form.text_area :description, id: :award_description, class: 'form-control', rows: "10", placeholder: "A brief description of the award. Who is eligible? What are the selection criteria?" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :nomination_close_date %>
-    <%= form.text_field :nomination_close_date, id: :award_nomination_close_date %>
+  <div class="form-group field row">
+    <%= form.label :nomination_close_date, class: "col-form-label col-sm-3 col-md-2" %>
+    <div class="col-sm-9 col-lg-8">
+    <%= form.date_field :nomination_close_date, id: :award_nomination_close_date, format: :short, class: 'form-control', placeholder: "MM/DD/YYYY" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn-primary btn-lg' %>
   </div>
 <% end %>
