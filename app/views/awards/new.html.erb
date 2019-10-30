@@ -1,11 +1,16 @@
-<div class="container-fluid">
-	<h1>New Award</h1>
-
-	<%= render 'form', award: @award %>
-
-
-
+<div class="header">
+    <div class="container">
+        <%= link_to 'Nominate Her', awards_path %>
+    </div>
 </div>
 
+<div class="page-title">
+	<div class="container">
+	    <h1>Submit a new award</h1>
+    </div>
+</div>
 
-<%= link_to 'Back', awards_path %>
+<div class="container">
+    <%= render 'form', award: @award %>
+
+</div>

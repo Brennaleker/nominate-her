@@ -1,20 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<div class="jumbotron">
-    <h1 class="display-3">Nominate Her</h1>
-    <p class="lead">This is a collaborative list of awards that women in tech could get nominated for. I won an award once, and it was a pivotal moment for me in my career. I would like more women to experience this feeling.</p>
-    <hr class="my-4">
-    <p>Help make this list more complete! If you know of an award not listed here, let us know.</p>
-    <p class="lead">
-    <a class="btn btn-primary btn-lg" href=<%= new_award_path %>>Add an award</a>
-    </p>
+<div class="hero container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>Nominate Her:</h1>
+            <h2>A collaborative listing of awards for women in tech</h2>
+        </div>
+    </div>
+    <div class="row pt-5 pb-3">
+        <div class="col-sm-6 col-md-8 pr-5">
+            <p class="lead"> This site was started by Jessica Garson who, after winning an award, wanted more women to experience that feeling. The project was later developed further at the 2017 <a href="https://techladyhackathon.org/">Tech Lady Hackathon</a> in Washington, DC.</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <p class="h5 mb-3 mt-1"><strong>Help make this list more complete!</strong></p>
+<!--             <p>If you know of an award not listed here, let us know.</p>
+            <p> -->
+            <a class="btn btn-primary" href=<%= new_award_path %>>Add an Award</a>
+            </p>
+        </div>
+    </div>
 </div>
 
 
 <section class="card-holder-awards">
     <div class="card-grid">
         <% @awards.each do |award| %>
-            <div class="card"> 
+            <div class="card">
                 <div class="card-body">
                     <h2><a href="<%= award.link %>" target="blank"><%= award.name %></a></h2>
                     <p><%= award.description %></p>
@@ -31,5 +42,4 @@
         <% end %>
         </div>
     </div>
-<section>
-
+</section>

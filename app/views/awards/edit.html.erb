@@ -1,6 +1,18 @@
-<h1>Editing Award</h1>
+<div class="header">
+    <div class="container">
+        <%= link_to 'Nominate Her', awards_path %>
+    </div>
+</div>
 
+<div class="page-title">
+	<div class="container">
+	    <h1>Edit award</h1>
+    </div>
+</div>
+
+<div class="container">
 <%= render 'form', award: @award %>
 
-<%= link_to 'Show', @award %> |
-<%= link_to 'Back', awards_path %>
+</div>
+
+

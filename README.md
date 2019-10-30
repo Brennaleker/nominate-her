@@ -1,9 +1,9 @@
-#Getting started on this project
-##Installing Rails, RVM and Ruby
+# Getting started on this project
+## Installing Rails, RVM and Ruby
 [Rails Install Guide](http://installrails.com/)
 
 
-#About this Project
+# About this Project
 This is a collaborative list of awards that women in tech could get nominated for. I won an award once, and it was a pivotal moment for me in my career. I would like more women to experience this feeling.
 
 # List of Awards
